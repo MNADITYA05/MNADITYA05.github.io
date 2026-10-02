@@ -2,8 +2,8 @@ name: Sync CV from Overleaf
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # runs daily at midnight UTC
-  workflow_dispatch:       # also manually triggerable
+    - cron: "0 0 * * *" # runs daily at midnight UTC
+  workflow_dispatch: # also manually triggerable
 
 jobs:
   sync-cv:
