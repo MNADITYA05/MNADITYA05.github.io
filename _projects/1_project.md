@@ -13,6 +13,7 @@ Dental radiograph segmentation is a prerequisite for automated detection of cavi
 **Grad-CAM** heat-maps are generated post-hoc to highlight the regions driving each segmentation decision, bridging the gap between clinical trust and AI automation.
 
 **Key contributions**
+
 - Contrastive pre-training on unlabelled panoramic X-rays reduces annotation dependency.
 - Attention-based U-Net decoder achieves accurate boundary delineation of teeth and surrounding structures.
 - Grad-CAM integration provides per-prediction visual explanations accepted by clinical reviewers.

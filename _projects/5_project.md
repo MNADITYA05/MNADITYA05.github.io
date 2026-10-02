@@ -12,6 +12,7 @@ Credit risk assessment for retail loans requires both accuracy and interpretabil
 The model is served as a FastAPI REST endpoint; a lightweight dashboard lets credit officers submit applicant data, view the default probability, and inspect the top factors driving the prediction in plain language.
 
 **Key contributions**
+
 - End-to-end pipeline from raw CSV ingestion to production-ready REST API.
 - LIME explanations rendered as ranked factor lists for non-technical users.
 - Threshold tuning to balance precision and recall per business risk appetite.

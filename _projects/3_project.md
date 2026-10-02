@@ -12,6 +12,7 @@ Predicting financial distress before it materialises allows lenders and regulato
 **SHAP** (SHapley Additive exPlanations) values are computed for every prediction, surfacing the top drivers — liquidity ratios, debt coverage, and working capital trends — in a form auditors and regulators can inspect.
 
 **Key contributions**
+
 - Two-year-ahead early warning system with >90 % recall on held-out distressed firms.
 - SHAP waterfall plots for individual firm explanations; SHAP beeswarm for portfolio-level feature importance.
 - Handles class imbalance via SMOTE + cost-sensitive learning.
