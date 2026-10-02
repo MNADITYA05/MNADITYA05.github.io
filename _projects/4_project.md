@@ -4,6 +4,7 @@ title: DealSight
 description: NLP pipeline for automated extraction, summarisation, and risk-flagging of M&A deal terms from unstructured financial documents.
 importance: 4
 category: work
+github: MNADITYA05/DealSight
 ---
 
 Legal and financial analysts spend hours reading merger agreements to extract key terms — price adjustments, MAC clauses, termination fees, and closing conditions. **DealSight** automates this with a multi-stage NLP pipeline that ingests raw deal documents, extracts structured fields, summarises each clause, and flags non-standard or high-risk language.

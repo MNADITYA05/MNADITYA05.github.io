@@ -5,6 +5,7 @@ description: Federated prompt tuning of BioMedCLIP for privacy-preserving pneumo
 importance: 2
 category: research
 related_publications: true
+github: MNADITYA05/TinyFedPrompt
 ---
 
 Deploying medical AI on edge hardware while preserving patient privacy is a hard constraint in real-world clinical settings. **TinyFedPrompt** solves this by replacing full model fine-tuning with *prompt tuning* — learning a small set of soft tokens that steer a frozen BioMedCLIP backbone — and distributing the training across clients via federated learning.

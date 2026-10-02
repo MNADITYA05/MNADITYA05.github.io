@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - MNADITYA05
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - MNADITYA05/DentoSeg-SSL-Self-Supervised-Dental-Panoramic-Segmentation
+  - MNADITYA05/TinyFedPrompt
+  - MNADITYA05/AI-Enhanced-Financial-Distress-Prediction-for-SMEs
+  - MNADITYA05/DealSight
+  - MNADITYA05/Loan

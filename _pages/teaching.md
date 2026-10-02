@@ -1,15 +1,43 @@
 ---
 layout: page
-permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
+permalink: /talks/
+title: talks
+description: Invited talks, guest lectures, and workshops.
 nav: true
 nav_order: 6
-calendar: true
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+<ul class="list-group list-group-flush">
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div>
+      <strong>Workshop on Code to Core — C Programming</strong>
+    </div>
+    <span class="badge bg-secondary">2026</span>
+  </li>
 
-{% include courses.liquid %}
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div>
+      <strong>Workshop on Introduction to Computer Vision and its Application in Agriculture</strong><br>
+      <span class="text-muted">Chettinad – Sarvalokaa Education, International School</span>
+    </div>
+    <span class="badge bg-secondary">2025</span>
+  </li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div>
+      <strong>8th Summer School on AI &amp; 3D Vision</strong><br>
+      <span class="text-muted">Selected participant — IIIT Hyderabad</span>
+    </div>
+    <span class="badge bg-secondary">2025</span>
+  </li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div>
+      <strong>Guest Speaker — Human-Robot Interaction</strong><br>
+      <span class="text-muted">IEI, KTR Local Center</span>
+    </div>
+    <span class="badge bg-secondary">2024</span>
+  </li>
+
+</ul>

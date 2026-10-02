@@ -5,6 +5,7 @@ description: Self-supervised panoramic dental X-ray segmentation with contrastiv
 importance: 1
 category: research
 related_publications: true
+github: MNADITYA05/DentoSeg-SSL-Self-Supervised-Dental-Panoramic-Segmentation
 ---
 
 Dental radiograph segmentation is a prerequisite for automated detection of cavities, fractures, and periodontal disease, yet large labelled datasets are expensive to obtain. **DentoSeg-SSL** addresses this by combining self-supervised contrastive pre-training with a U-Net segmentation head, enabling the model to extract robust features from unlabelled panoramic radiographs before fine-tuning on a small annotated set.

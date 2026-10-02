@@ -1,7 +1,8 @@
 # _plugins/cv_logo_inject.rb
 #
-# 1. Rewrites year-only date badges on the CV page with month+year (e.g. "Jun 2026 - Jul 2026")
+# 1. Rewrites year-only date badges on the CV page with month+year
 # 2. Injects institution logos into the left date column via JS
+# 3. Injects ResearchGate social icon on the about page
 
 MONTHS = %w[Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec]
 
@@ -17,11 +18,8 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   next unless page.url == "/cv/" || page.url == "/cv/index.html"
   next unless page.output_ext == ".html"
 
-  # --- 1. Rewrite date badges with month+year ---
-  # cv.yml structure: data["cv"]["cv"]["sections"]["Experience"] / ["Education"]
   cv_root = ((page.site.data["cv"] || {})["cv"] || {})
   sections = cv_root["sections"] || {}
-  # Gem renders Experience before Education regardless of YAML order
   all_entries = (sections["Experience"] || []) + (sections["Education"] || [])
 
   output = page.output.dup
@@ -29,14 +27,12 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     s = cv_format_date(entry["start_date"])
     e = cv_format_date(entry["end_date"])
     full_date = "#{s} - #{e}"
-    # Replace the FIRST remaining year-only badge (e.g. ">2026 - present<")
     output.sub!(%r{(<span\b[^>]*\bmin-width:\s*75px[^>]*>)\d{4}[^<]*(</span>)}) do
       "#{$1}#{full_date}#{$2}"
     end
   end
   page.output = output
 
-  # --- 2. Inject logos + suppress bullets ---
   script = <<~JS
     <style>
     .cv-logo {
@@ -67,16 +63,16 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     <script>
     document.addEventListener("DOMContentLoaded", function () {
       var logoMap = {
-        "Indian Institute of Technology, Kharagpur":                        "/assets/img/iit_kgp_logo.png",
-        "Farmience AgroTech":                                               "/assets/img/farmience_logo.jpg",
-        "DST-ANRF (SERB) Funded Project, SRMIST":                          "/assets/img/srmist_logo.jpg",
-        "SRM Technologies Private Limited":                                 "/assets/img/srm_tech_logo.jpg",
-        "National Institute of Technology, Kurukshetra":                    "/assets/img/nit_kuk_logo.png",
-        "Indian Institute of Technology, Jammu":                            "/assets/img/iit_jammu_logo.png",
-        "Intel Corporation — Unnati Industrial Training Programme":    "/assets/img/intel_logo.svg",
-        "National Institute of Technology, Tiruchirappalli":                "/assets/img/nit_trichy_logo.png",
-        "Indian Institute of Information Technology, Allahabad":            "/assets/img/iiit_allahabad_logo.png",
-        "SRM Institute of Science and Technology":                          "/assets/img/srmist_logo.jpg"
+        "Indian Institute of Technology, Kharagpur":                     "/assets/img/iit_kgp_logo.png",
+        "Farmience AgroTech":                                            "/assets/img/farmience_logo.jpg",
+        "DST-ANRF (SERB) Funded Project, SRMIST":                       "/assets/img/srmist_logo.jpg",
+        "SRM Technologies Private Limited":                              "/assets/img/srm_tech_logo.jpg",
+        "National Institute of Technology, Kurukshetra":                 "/assets/img/nit_kuk_logo.png",
+        "Indian Institute of Technology, Jammu":                         "/assets/img/iit_jammu_logo.png",
+        "Intel Corporation — Unnati Industrial Training Programme":      "/assets/img/intel_logo.svg",
+        "National Institute of Technology, Tiruchirappalli":             "/assets/img/nit_trichy_logo.png",
+        "Indian Institute of Information Technology, Allahabad":         "/assets/img/iiit_allahabad_logo.png",
+        "SRM Institute of Science and Technology":                       "/assets/img/srmist_logo.jpg"
       };
       document.querySelectorAll("li.list-group-item").forEach(function (item) {
         var companyEl = item.querySelector("h6:not(.title)");
@@ -98,4 +94,22 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   JS
 
   page.output = page.output.sub("</body>", script + "\n</body>")
+end
+
+# --- 3. Inject ResearchGate social icon on the about page ---
+Jekyll::Hooks.register :pages, :post_render do |page|
+  next unless page.url == "/" || page.url == "/index.html"
+  next unless page.output_ext == ".html"
+
+  rg_link = ' <a href="https://www.researchgate.net/profile/M-N-Aditya-2" title="ResearchGate" rel="external nofollow noopener" target="_blank"><i class="ai ai-researchgate"></i></a>'
+
+  # Insert after the ORCID icon link (last social icon before our addition)
+  page.output = page.output.sub(
+    %r{(ai-orcid[^<]*</i></a>)},
+    "\\1#{rg_link}"
+  )
+
+  # Remove the RSS icon (replace it, do not keep both)
+  page.output = page.output.gsub(%r{<a[^>]+href=['"]/feed\.xml['"][^>]*>.*?</a>}m, "")
+  page.output = page.output.gsub(%r{<a[^>]+[^>]*fa-rss[^<]*</i></a>}m, "")
 end

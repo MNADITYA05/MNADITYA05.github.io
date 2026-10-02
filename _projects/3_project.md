@@ -4,6 +4,7 @@ title: AI Financial Distress Prediction
 description: Ensemble ML pipeline for early prediction of corporate financial distress, with SHAP-based feature attribution for regulatory transparency.
 importance: 3
 category: work
+github: MNADITYA05/AI-Enhanced-Financial-Distress-Prediction-for-SMEs
 ---
 
 Predicting financial distress before it materialises allows lenders and regulators to intervene early. This project builds an end-to-end pipeline that ingests balance-sheet and cash-flow ratios, engineers lag features, and trains an ensemble of gradient-boosted trees to classify firms as distressed or healthy up to two fiscal years ahead.
