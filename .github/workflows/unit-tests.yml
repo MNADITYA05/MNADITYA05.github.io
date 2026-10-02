@@ -19,6 +19,7 @@ on:
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/unit-tests.yml"
+      - "_plugins/**"
   pull_request:
     branches:
       - master
@@ -37,6 +38,7 @@ on:
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/unit-tests.yml"
+      - "_plugins/**"
 
 jobs:
   comments-integration-tests:
