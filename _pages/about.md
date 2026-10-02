@@ -27,7 +27,7 @@ I am a final-year B.Tech student in Electronics and Communication Engineering wi
 
 I have had the opportunity to work with research groups at **IIT Kharagpur**, **IIT Jammu**, **NIT Kurukshetra**, **NIT Trichy**, and **IIIT Allahabad**, as well as industry experience at **SRM Technologies** and **Farmience AgroTech**. My work spans federated learning for healthcare, document image forgery detection, dental X-ray segmentation, and financial distress prediction.
 
-I have authored and co-authored **11 publications** — including journal articles, conference papers, and book chapters — in venues spanning computer vision, biomedical engineering, and applied AI. I am actively seeking research opportunities (RA/MS/PhD) in federated learning, privacy-preserving ML, and efficient deep learning.
+I have authored and co-authored **13 publications** — including journal articles, conference papers, and book chapters — in venues spanning computer vision, biomedical engineering, and applied AI. I am actively seeking research opportunities (RA/MS/PhD) in federated learning, privacy-preserving ML, and efficient deep learning.
 
 **Research Interests:** Federated Learning · Medical Image Analysis · Explainable AI · TinyML · Self-Supervised Learning · Agentic AI
 
