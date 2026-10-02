@@ -7,7 +7,7 @@ subtitle: >
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_1.jpg
   image_circular: false
   more_info: >
     <p>📧 mnaditya05@gmail.com</p>
@@ -30,3 +30,15 @@ I have had the opportunity to work with research groups at **IIT Kharagpur**, **
 I have authored and co-authored **11 publications** — including journal articles, conference papers, and book chapters — in venues spanning computer vision, biomedical engineering, and applied AI. I am actively seeking research opportunities (RA/MS/PhD) in federated learning, privacy-preserving ML, and efficient deep learning.
 
 **Research Interests:** Federated Learning · Medical Image Analysis · Explainable AI · TinyML · Self-Supervised Learning · Agentic AI
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var photos = [
+      "{{ '/assets/img/prof_pic_1.jpg' | relative_url }}",
+      "{{ '/assets/img/prof_pic_2.png' | relative_url }}"
+    ];
+    var chosen = photos[Math.floor(Math.random() * photos.length)];
+    var img = document.querySelector(".profile img");
+    if (img) { img.src = chosen; }
+  });
+</script>

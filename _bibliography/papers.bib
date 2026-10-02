@@ -7,19 +7,24 @@
   abbr         = {J},
   preview      = {orthodontic_preview.png},
   note         = {Grant No: CRG/2022/005834},
-  url          = {https://www.biomaterials.org.in/tibao/index.php/tibao/article/view/200}
+  bibtex_show = {true},
+  html  = {https://www.biomaterials.org.in/tibao/index.php/tibao/article/view/200},
+  abstract     = {Orthodontic bracket debonding requires controlled force application to avoid enamel damage, yet no standardised measurement device exists for clinical practice. This work presents a purpose-built prototype that quantifies debonding forces in real time, enabling practitioners to apply evidence-based force thresholds. The device is validated against conventional load-cell benchmarks and demonstrates sufficient accuracy and repeatability for clinical deployment, contributing a tangible tool to DST-SERB funded research on orthodontic biomechanics.}
 }
 
 @article{aditya2025dental,
   title        = {Explainable AI for Panoramic Dental Radiographs using Contrastive Learning and UNet Based Segmentation},
-  author       = {Aditya, M N and others},
+  author       = {Sreeram, Aadyoth and Balamurugan, R. and Aditya, M. N.},
   journal      = {Journal of Soft Computing Paradigm},
   volume       = {7},
   number       = {2},
   pages        = {114--123},
   year         = {2025},
   abbr         = {J},
-  url          = {https://irojournals.com/jscp/article/view/7/2/4}
+  preview      = {dental_preview.png},
+  bibtex_show = {true},
+  html  = {https://irojournals.com/jscp/article/view/7/2/4},
+  abstract     = {Self-supervised segmentation of panoramic dental radiographs often lacks interpretability, leading clinicians to be hesitant in relying on model predictions. We propose a hybrid strategy that integrates attention-based U-Net segmentation with contrastive self-supervised pre-training, enabling robust feature extraction from unlabelled radiographs before supervised fine-tuning. Grad-CAM heat-maps are generated post-hoc to highlight regions driving each segmentation decision, bridging the gap between clinical trust and AI automation. The approach detects anomalies including cavities, fractures, and periodontal disease with high accuracy while providing visual explanations that improve diagnostic confidence.}
 }
 
 @inproceedings{aditya2026federated,
@@ -30,7 +35,9 @@
   selected     = {true},
   abbr         = {C},
   preview      = {feddqn_preview.png},
-  note         = {Forthcoming}
+  bibtex_show = {true},
+  note         = {Forthcoming},
+  abstract     = {Communication overhead is a primary bottleneck in federated learning, particularly when clients operate under heterogeneous bandwidth constraints. FedDQN-Ctrl addresses this by training a Deep Q-Network controller that dynamically selects per-client compression ratios each round, balancing model accuracy against communication cost. The controller learns a policy that adapts to instantaneous network conditions and client data heterogeneity, achieving comparable accuracy to uncompressed baselines at a fraction of the communication budget.}
 }
 
 @inproceedings{aditya2026tinyfed,
@@ -41,95 +48,124 @@
   selected     = {true},
   abbr         = {C},
   preview      = {tinyfed_preview.png},
-  note         = {Forthcoming}
+  bibtex_show = {true},
+  note         = {Forthcoming},
+  abstract     = {Deploying medical AI on edge hardware while preserving patient privacy demands both computational efficiency and strong privacy guarantees. TinyFedPrompt replaces full fine-tuning of BioMedCLIP with federated prompt tuning: each client learns a small set of soft prompt tokens locally while the frozen backbone remains on-device. Raw patient images never leave the client, and only compact prompt updates are aggregated each round. The system achieves competitive pneumonia detection accuracy on Raspberry Pi-class hardware with under 5 MB of communication per client per round, demonstrating practical privacy-preserving medical AI at the edge.}
 }
 
 @inproceedings{aditya2026fpga,
-  title        = {An {FPGA}-Based Architecture for Interpretable {PM2.5} Anomaly Detection},
-  author       = {Aditya, M N and others},
+  title        = {An {FPGA}-Based Architecture for Interpretable {PM2.5} Anomaly Detection with Counterfactual Explanations},
+  author       = {Aditya, M. N. and Krishnamoorthy, Keerthivasan and Chandana, S. D. and Sudhanya, P.},
   booktitle    = {ICIET 2026},
   year         = {2026},
   abbr         = {C},
-  note         = {Forthcoming}
+  preview      = {fpga_preview.png},
+  bibtex_show = {true},
+  note         = {Forthcoming},
+  abstract     = {Black-box machine learning models produce no explanation for their decisions, a critical limitation in safety-sensitive environmental monitoring. This paper presents an FPGA-based PM2.5 anomaly detection system that closes this gap by generating counterfactual explanations — reporting to the operator exactly which threshold was violated and by how much. The architecture combines adaptive threshold learning, EPA PM2.5 categorisation, and cold-start protection on an Artix-7 XC7A35T FPGA running at 50 MHz. The system achieves 40 ns processing latency, 6.55 mW total power consumption, and 3.6\% LUT utilisation, confirming that hardware-accelerated interpretable anomaly detection is feasible on resource-constrained edge devices.}
 }
 
 @inproceedings{aditya2025lstm,
   title        = {Deep Learning for Inflation and Oil Price Forecasting: A Comparative Study of {LSTM} and Transformer Models for Macroeconomic Policy Analysis},
-  author       = {Aditya, M N and others},
+  author       = {Pradhan, Ujan and Anand, Vyomika and Aditya, M. N. and Alam, Md Mushir and Chattopadhyay, Heemangshu and Patil, Meghraj and Baig, Shaik Ayman Hameed and Balamurugan, R. and Krishna, Pankaj and Ahmed, Arshad B. and Seenivasan, Sridharan and Mittal, Shivam and Sreeram, A. S. and Kale, Parth and Aman, Anush},
   booktitle    = {Innovations in Data Analytics: Selected Papers of ICIDA 2025, Volume 1},
   series       = {Springer LNNS},
   pages        = {339--361},
   year         = {2025},
   abbr         = {C},
-  url          = {https://link.springer.com/chapter/10.1007/978-3-032-27711-4_27}
+  preview      = {lstm_preview.png},
+  bibtex_show = {true},
+  html  = {https://link.springer.com/chapter/10.1007/978-3-032-27711-4_27},
+  abstract     = {Effective monetary policy formulation requires accurate inflation forecasting, yet conventional econometric approaches such as ARIMA and VAR have struggled to capture the complex non-linear dynamics of recent economic upheaval. This paper develops a multivariate deep learning framework to predict U.S. inflation rates using 25 years of macroeconomic time series (2000–2024). Four neural architectures are systematically evaluated — VLSTM, Bidirectional LSTM with attention, CNN-LSTM hybrid, and Transformer — across six economic parameters including oil prices, money supply, and unemployment. Bidirectional LSTM with attention achieves the strongest predictive accuracy, while SHAP-based explanations reveal the dominant macroeconomic drivers, providing policy-actionable interpretability alongside forecasting performance.}
 }
 
 @inproceedings{aditya2025liver,
   title        = {{SMT-UPerNet}: A Scale-Aware Modulation Transformer Network for Explainable Liver Tumor Segmentation},
-  author       = {Aditya, M N and others},
+  author       = {Firos, V. M. and Aditya, M. N. and Alphones, P. J. A. and Gangadharan, G. R.},
   booktitle    = {HINT 2025},
   series       = {Springer LNNS},
   year         = {2025},
   abbr         = {C},
-  url          = {https://drive.google.com/file/d/1TY4PcdemMW3GE7bz32aDjEAVM1_7XV8X/view?usp=sharing}
+  preview      = {liver_preview.png},
+  bibtex_show = {true},
+  html  = {https://drive.google.com/file/d/1TY4PcdemMW3GE7bz32aDjEAVM1_7XV8X/view?usp=sharing},
+  abstract     = {Accurate liver tumor segmentation in abdominal CT scans is vital for diagnosis and surgical planning, yet heterogeneous tumor appearance and low contrast with surrounding tissue make it technically challenging. We propose SMT-UPerNet, a framework integrating a Scale-Aware Modulation Transformer backbone with a UPerNet multi-scale decoder. The SMT backbone uses dual attention — channel-wise and spatial self-attention — to capture fine-grained and long-range dependencies, while a progressive training schedule with staged layer unfreezing adapts the transformer to the LiTS17 dataset. Grad-CAM is integrated to generate case-level visual explanations. On the LiTS17 validation set, SMT-UPerNet attains Dice of 89.00\%, IoU of 80.20\%, precision of 89.80\%, recall of 88.90\%, and HD95 of 3.28 mm.}
 }
 
 @inproceedings{aditya2025laryngeal,
   title        = {Few-Shot Learning for Early Detection of Laryngeal Cancer with Explainable {AI}},
-  author       = {Aditya, M N and others},
+  author       = {Pradhan, Ujan and Prerna and Aditya, M. N.},
   booktitle    = {IEMENTech 2025},
   publisher    = {IEEE},
   year         = {2025},
   abbr         = {C},
-  url          = {https://ieeexplore.ieee.org/document/10959577}
+  preview      = {laryngeal_preview.png},
+  bibtex_show = {true},
+  html  = {https://ieeexplore.ieee.org/document/10959577},
+  abstract     = {Early diagnosis of laryngeal spinocellular carcinoma significantly affects prognosis and treatment outcomes. This work presents a few-shot classification model that distinguishes healthy from early-stage cancerous laryngeal tissue even with very limited labelled data. The approach is evaluated on an expert-curated dataset of 1,320 image patches (100×100 pixels) extracted from narrow-band laryngoscope images. Explainable AI (XAI) techniques are applied to improve model transparency and enhance clinical trust in predictions, with the aim of developing a reliable, interpretable diagnostic tool that bridges state-of-the-art machine learning with practical clinical application in resource-constrained settings.}
 }
 
 @inproceedings{aditya2025kidney,
   title        = {Explainable {AI} for Kidney Stone Prediction: A Machine Learning-Based Clinical Analysis},
-  author       = {Aditya, M N and others},
+  author       = {Pradhan, Ujan and Chattopadhyay, Heemangshu and Aditya, M. N. and Patil, Meghraj and Baig, Shaik Ayman Hameed and Mittal, Shivam and Valentine, Lenin C. J. and Balamurugan, R.},
   booktitle    = {RAEEUCCI 2025},
   year         = {2025},
   abbr         = {C},
-  url          = {https://ieeexplore.ieee.org/document/11048291}
+  preview      = {kidney_preview.png},
+  bibtex_show = {true},
+  html  = {https://ieeexplore.ieee.org/document/11048291},
+  abstract     = {Kidney stones are a prevalent urological disorder with significant repercussions on patient health and healthcare expenditure. This study develops a robust ML framework for kidney stone prediction using six essential clinical features: gravity, pH, osmolality, conductivity, urea, and calcium. Multiple classifiers — SVM, KNN, Random Forest, and Extra Trees — are trained with hyperparameter tuning after preprocessing including outlier detection, feature scaling, and SMOTE balancing. The Extra Trees Classifier achieves an accuracy of 92.5\% with ROC-AUC of 0.96. SHAP and LIME are applied to identify the strongest predictors — calcium, osmolality, and urea — improving clinical transparency and trust.}
 }
 
 @inproceedings{aditya2025malware,
   title        = {Malware Analysis Using Hashing and Explainable {AI}: A Comparative Study of {LIME} and {SHAP} Techniques},
-  author       = {Aditya, M N and others},
+  author       = {Pradhan, Ujan and Navaneeth, K. M. and Aditya, M. N.},
   booktitle    = {AIML-AE 2025},
   publisher    = {IEEE},
   year         = {2025},
   abbr         = {C},
-  url          = {https://ieeexplore.ieee.org/document/10932147}
+  preview      = {malware_preview.png},
+  bibtex_show = {true},
+  html  = {https://ieeexplore.ieee.org/document/10932147},
+  abstract     = {Malware detection models achieve high predictive accuracy but their black-box nature limits trust and adoption among security practitioners. This paper integrates hashing techniques with XAI methods to make malware classification decisions interpretable. A Random Forest classifier is trained on TF-IDF vectorised textual features extracted from malware binaries. SHAP provides global importance of opcodes and n-grams across the dataset, while LIME supplies instance-specific explanations for individual predictions. The comparative study demonstrates that SHAP and LIME are complementary — SHAP for dataset-level auditing and LIME for case-level forensic analysis — enabling more transparent and trustworthy AI-driven cybersecurity workflows.}
 }
 
 @inproceedings{aditya2024land,
   title        = {Analyzing Land Submergence Impact on Temperature Using Random Forest Regression and Explainable {AI}},
-  author       = {Aditya, M N and others},
+  author       = {Pradhan, Ujan and Aditya, M. N. and Raj Kumar, R.},
   booktitle    = {ACOIT 2024},
   year         = {2024},
   abbr         = {C},
-  url          = {https://ieeexplore.ieee.org/document/10939510}
+  preview      = {land_preview.png},
+  bibtex_show = {true},
+  html  = {https://ieeexplore.ieee.org/document/10939510},
+  abstract     = {Coastal land submergence driven by rising sea levels significantly affects temperature and socioeconomic conditions across Asian coastlines. Conventional shoreline change models rely on historical data and simple statistics that are neither accurate nor interpretable enough for informed policy decisions. This paper applies Random Forest Regression to predict the effect of land submergence on temperature change across the Asian coast over 30 years (1990–2020), and integrates LIME and SHAP to explain the contributions of coastal length, land impact, and population characteristics. Results demonstrate that combining ensemble ML with XAI improves predictive accuracy while providing transparent, actionable insight for coastal managers and policymakers.}
 }
 
 @incollection{aditya2026trace1,
   title        = {Converging Sustainability, {AI} and Global Health: A Data-Driven Roadmap for Responsible Trace Element and Heavy Metal Management},
-  author       = {Aditya, M N and others},
+  author       = {Pradhan, Ujan and Ray, Sreyojyoti and Aditya, M. N. and Anand, Vyomika},
   booktitle    = {Trace Elements and Heavy Metals: Bridging Sustainability and Global Health Goals},
   publisher    = {Springer},
   pages        = {565--599},
   year         = {2026},
   abbr         = {BC},
-  url          = {https://link.springer.com/chapter/10.1007/978-3-032-26858-7_20}
+  preview      = {trace1_preview.png},
+  bibtex_show = {true},
+  html  = {https://link.springer.com/chapter/10.1007/978-3-032-26858-7_20},
+  abstract     = {The convergence of sustainability, artificial intelligence, and global health presents unprecedented opportunities to address trace element and heavy metal contamination — one of the most critical environmental and public health challenges of the 21st century. This chapter develops an integrated data-driven framework for responsible management of these substances, combining sensor networks, big-data analytics, predictive modelling, and optimised remediation strategies. The framework incorporates circular economy principles and green remediation technologies with a community-based participatory approach. Case studies and quantitative evaluations demonstrate how the junction of these three domains yields synergistic solutions, with ethical considerations ensuring equitable benefit for vulnerable populations.}
 }
 
 @incollection{aditya2026trace2,
   title        = {{AI}-Driven Circular Economy: Optimizing Industrial Use and Recovery of Trace Elements and Heavy Metals},
-  author       = {Aditya, M N and others},
+  author       = {Pradhan, Ujan and Ray, Sreyojyoti and Aditya, M. N. and Anand, Vyomika},
   booktitle    = {Trace Elements and Heavy Metals: Bridging Sustainability and Global Health Goals},
   publisher    = {Springer},
   pages        = {535--564},
   year         = {2026},
   abbr         = {BC},
-  url          = {https://link.springer.com/chapter/10.1007/978-3-032-26858-7_19}
+  preview      = {trace2_preview.png},
+  bibtex_show = {true},
+  html  = {https://link.springer.com/chapter/10.1007/978-3-032-26858-7_19},
+  abstract     = {The rare nature, toxicity, and complex recovery processes of trace elements and heavy metals present significant challenges to modern manufacturing, electronics, renewable energy systems, and advanced materials. This chapter examines how AI technologies — machine learning, deep learning, computer vision, and optimisation algorithms — are reshaping the circular economy blueprint for these substances. Real-time monitoring, predictive maintenance, and smart decision-making systems are shown to substantially improve mineral recovery rates. The chapter analyses trace element and heavy metal flows within industrial systems, maps recovery bottlenecks, and evaluates economic and environmental benefits of AI-driven circular economy optimisation across metallurgical and electronic-waste sectors.}
 }

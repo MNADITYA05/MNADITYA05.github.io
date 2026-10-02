@@ -1,0 +1,14 @@
+# Development overrides — use with:
+#   bundle exec jekyll serve --config _config.yml,_config_dev.yml
+#
+# Builds _site to /tmp to avoid iCloud Drive sync timeouts (Errno::ETIMEDOUT,
+# IO::TimeoutError) that happen when _site is on the Desktop (iCloud-synced).
+
+destination: /tmp/mnaditya05-site
+
+jekyll-minifier:
+  compress_html: false
+  compress_javascript: false
+  compress_css: false
+  compress_json: false
+  exclude: ["**/*"]
