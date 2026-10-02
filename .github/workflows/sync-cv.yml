@@ -1,0 +1,61 @@
+name: Sync CV from Overleaf
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # runs daily at midnight UTC
+  workflow_dispatch:       # also manually triggerable
+
+jobs:
+  sync-cv:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout portfolio repo
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install overleaf-git-sync
+        run: uv tool install overleaf-git-sync
+
+      - name: Authenticate with Overleaf
+        run: |
+          printf '%s' '${{ secrets.OVERLEAF_SESSION }}' | \
+            ol auth login --host https://www.overleaf.com --cookie-stdin
+
+      - name: Init Overleaf project
+        run: |
+          mkdir -p /tmp/overleaf-cv
+          cd /tmp/overleaf-cv
+          ol init --project-id ${{ secrets.OVERLEAF_PROJECT_ID }}
+
+      - name: Pull latest from Overleaf
+        run: |
+          cd /tmp/overleaf-cv
+          ol pull
+
+      - name: Copy compiled PDF to portfolio
+        run: |
+          # Find the compiled PDF (usually output.pdf or same name as main .tex file)
+          PDF=$(find /tmp/overleaf-cv -name "*.pdf" | head -1)
+          if [ -z "$PDF" ]; then
+            echo "No PDF found in Overleaf project"
+            exit 1
+          fi
+          echo "Found PDF: $PDF"
+          cp "$PDF" assets/pdf/M_N_ADITYA_CV.pdf
+
+      - name: Commit and push if PDF changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/pdf/M_N_ADITYA_CV.pdf
+          if git diff --staged --quiet; then
+            echo "CV unchanged, nothing to commit"
+          else
+            git commit -m "Auto-sync CV from Overleaf [skip ci]"
+            git push
+          fi
